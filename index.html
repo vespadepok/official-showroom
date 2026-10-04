@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vespa Depok | Katalog Vespa Baru Resmi</title>
+    <meta name="description" content="Temukan katalog Vespa baru resmi di Vespa Depok. Lihat pilihan Primavera, Sprint, LX, GTX dan tipe lainnya.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        const CONFIG = {
+            storeName: "VESPA DEPOK",
+            whatsapp: "628998951070",
+            instagram: "vespa.depok.idn",
+            instagramLink: "https://instagram.com/vespa.depok.idn",
+            address: "Jl. Ir. H. Juanda, Kemiri Muka, Kecamatan Beji, Kota Depok, Jawa Barat 16418",
+            primaryColor: "#9AC3C5",
+            mapsLink: "https://share.google/up1MzFwIbY1hmGYkt",
+            logoPath: "https://i.imgur.com/fEfSYZD.png", 
+            heroImage: "https://i.imgur.com/7U359ZZ.png"
+        };
+
+        const CATEGORIES = ["SEMUA", "PRIMAVERA", "SPRINT", "LX", "GTS", "GTV", "LIBERTY", "APRILLIA"];
+
+        const products = [
+            {
+                id: 1,
+                category: "PRIMAVERA",
+                name: "Vespa Primavera S 150 - ABS VIN 25",
+                description: "Vespa Primavera adalah mahakarya sejati dengan desain timeless. Mewakili jiwa urban yang dinamis dengan lekukan klasik nan elegan.",
+                colors: ["White", "Silver"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://i.imgur.com/pKpSBBt.jpeg",
+                    "https://i.imgur.com/KA7v7kk.jpeg"
+                ],
+                specifications: {
+                    engine: "4-Stroke 3-Valves Single Cylinder, i-get",
+                    transmission: "Automatic CVT",
+                    fuel: "Electronic Injection",
+                    capacity: "154.8 cc",
+                    dimensions: "1,852 mm x 680 mm",
+                    weight: "117 kg (Kerb weight)",
+                    safety: "ABS (Anti-lock Braking System), Immobilizer",
+                    features: "LED Headlamp, USB Port"
+                }
+            },
+            {
+                id: 2,
+                category: "PRIMAVERA",
+                name: "Vespa Primavera S 180 - ABS VIN 26",
+                description: "Versi yang lebih sporty dari Primavera, dengan sentuhan detail eksklusif dan warna yang lebih berani untuk karakter yang menonjol.",
+                colors: ["Blue", "Khaki", "White"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://i.imgur.com/53dkrl6.jpeg",
+                    "https://i.imgur.com/b9pzsZc.jpeg",
+                    "https://i.imgur.com/VLIiN5J.jpeg"
+                ],
+                specifications: {
+                    engine: "4-Stroke 3-Valves Single Cylinder, i-get",
+                    transmission: "Automatic CVT",
+                    capacity: "154.8 cc",
+                    safety: "ABS, Immobilizer",
+                    features: "Sporty Decals, LED, USB Port"
+                }
+            },
+            {
+                id: 3,
+                category: "PRIMAVERA",
+                name: "Vespa Primavera Livrea 80th",
+                description: "Edisi spesial dengan kombinasi warna two-tone yang ekspresif, terinspirasi dari kebebasan berekspresi.",
+                colors: ["Orange Tramonto", "Blue Audace"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://i.imgur.com/l1pRt6t.jpeg"
+                ],
+                specifications: {
+                    engine: "4-Stroke 3-Valves, i-get",
+                    capacity: "154.8 cc",
+                    safety: "ABS, Immobilizer"
+                }
+            },
+            {
+                id: 4,
+                category: "SPRINT",
+                name: "Vespa Sprint Tech 150 - ABS VIN 25",
+                description: "Sporty, agresif, dan dinamis. Vespa Sprint hadir dengan lampu kotak yang ikonik dan desain velg yang maskulin.",
+                colors: ["Black", "Grey"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://i.imgur.com/SP7436T.jpeg",
+                    "https://i.imgur.com/Z8gehb9.jpeg"
+                ],
+                specifications: {
+                    engine: "4-Stroke 3-Valves Single Cylinder, i-get",
+                    capacity: "154.8 cc",
+                    features: "Rectangular Headlight, LED"
+                }
+            },
+            {
+                id: 5,
+                category: "SPRINT",
+                name: "Vespa Sprint S 150 -ABS VIN 25",
+                description: "Meningkatkan karakter sporty Sprint ke level berikutnya dengan detail merah agresif dan matte finish.",
+                colors: ["Green Tenace", "Orange Tramonto", "Black Opaco"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://placehold.co/800x800/ffffff/1F2937?text=Sprint+S+1",
+                    "https://placehold.co/800x800/ffffff/1F2937?text=Sprint+S+2"
+                ],
+                specifications: {
+                    engine: "4-Stroke 3-Valves, i-get",
+                    capacity: "154.8 cc",
+                    safety: "ABS, Immobilizer"
+                }
+            },
+            {
+                id: 6,
+                category: "SPRINT",
+                name: "Vespa Sprint S 180 - ABS VIN 26",
+                description: "Deskripsi singkat mengenai vespa ini.",
+                colors: ["Warna 1", "Warna 2"],
+                price: "Hubungi Kami",
+                images: ["https://placehold.co/800x800/ffffff/1F2937?text=Gambar+Vespa"],
+                specifications: { mesin: "Detail Mesin", fitur: "Detail Fitur" }
+            },
+            {
+                id: 7,
+                category: "SPRINT",
+                name: "Vespa Sprint Officina 180 - VIN 26",
+                description: "Deskripsi singkat mengenai vespa ini.",
+                colors: ["Warna 1", "Warna 2"],
+                price: "Hubungi Kami",
+                images: ["https://placehold.co/800x800/ffffff/1F2937?text=Gambar+Vespa"],
+                specifications: { mesin: "Detail Mesin", fitur: "Detail Fitur" }
+            },
+            {
+                id: 8,
+                category: "SPRINT",
+                name: "Vespa Sprint Tech 180 - VIN 26",
+                description: "Deskripsi singkat mengenai vespa ini.",
+                colors: ["Warna 1", "Warna 2"],
+                price: "Hubungi Kami",
+                images: ["https://placehold.co/800x800/ffffff/1F2937?text=Gambar+Vespa"],
+                specifications: { mesin: "Detail Mesin", fitur: "Detail Fitur" }
+            },
+            {
+                id: 9,
+                category: "SPRINT",
+                name: "Vespa Sprint Livrea 80th",
+                description: "Deskripsi singkat mengenai vespa ini.",
+                colors: ["Warna 1", "Warna 2"],
+                price: "Hubungi Kami",
+                images: ["https://placehold.co/800x800/ffffff/1F2937?text=Gambar+Vespa"],
+                specifications: { mesin: "Detail Mesin", fitur: "Detail Fitur" }
+            },
+            {
+                id: 10,
+                category: "LX",
+                name: "Vespa New LX  150 - VIN 25",
+                description: "Entry-level yang tetap memancarkan keanggunan sejati khas Vespa. Sempurna untuk navigasi dalam kota.",
+                colors: ["Grey Delicato", "Red Passione"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://placehold.co/800x800/ffffff/9AC3C5?text=LX+125"
+                ],
+                specifications: {
+                    engine: "4-Stroke 3-Valves, i-get",
+                    capacity: "124.5 cc",
+                    features: "Classic Round Lamp, LED"
+                }
+            },
+            {
+                id: 11,
+                category: "GTS",
+                name: "Vespa GTS 250 SUPERTECH - VIN 26",
+                description: "Keseimbangan antara performa tinggi, ukuran elegan, dan kenyamanan perjalanan jarak jauh.",
+                colors: ["Green Relax", "Beige Sabbia"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://placehold.co/800x800/ffffff/1F2937?text=GTS+Classic"
+                ],
+                specifications: {
+                    engine: "i-get, 4-Valves Liquid Cooled",
+                    capacity: "155 cc",
+                    safety: "ABS Dual Channel, ASR"
+                }
+            },
+            {
+                id: 12,
+                category: "GTS",
+                name: "Vespa GTS Livrea 80th",
+                description: "Deskripsi singkat mengenai vespa ini.",
+                colors: ["Warna 1", "Warna 2"],
+                price: "Hubungi Kami",
+                images: ["https://placehold.co/800x800/ffffff/1F2937?text=Gambar+Vespa"],
+                specifications: { mesin: "Detail Mesin", fitur: "Detail Fitur" }
+            },
+            {
+                id: 13,
+                category: "GTV",
+                name: "Vespa GTV Officina 8",
+                description: "Deskripsi singkat mengenai vespa ini.",
+                colors: ["Warna 1", "Warna 2"],
+                price: "Hubungi Kami",
+                images: ["https://placehold.co/800x800/ffffff/1F2937?text=Gambar+Vespa"],
+                specifications: { mesin: "Detail Mesin", fitur: "Detail Fitur" }
+            },
+            {
+                id: 14,
+                category: "LIBERTY",
+                name: "Vespa Liberty S 125",
+                description: "Edisi legendaris bernuansa balap klasik dengan 'faro basso' (lampu di spakbor depan).",
+                colors: ["Grey Titanium"],
+                price: "Hubungi Kami",
+                images: [
+                    "https://placehold.co/800x800/ffffff/9AC3C5?text=Sei+Giorni"
+                ],
+                specifications: {
+                    engine: "High Performance Engine (HPE)",
+                    capacity: "278 cc",
+                    safety: "ABS, ASR"
+                }
+            },
+            {
+                id: 15,
+                category: "APRILLIA",
+                name: "Vespa Aprillia GR GT Sport",
+                description: "Deskripsi singkat mengenai vespa ini.",
+                colors: ["Warna 1", "Warna 2"],
+                price: "Hubungi Kami",
+                images: ["https://placehold.co/800x800/ffffff/1F2937?text=Gambar+Vespa"],
+                specifications: { mesin: "Detail Mesin", fitur: "Detail Fitur" }
+            }
+        ];
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vespa: { DEFAULT: '#9AC3C5', light: '#b6d5d7', dark: '#7fb1b4' },
+                        dark: '#1F2937',
+                        soft: '#F9FAFB'
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .product-image-container { aspect-ratio: 1 / 1; }
+        .product-image { object-fit: contain; width: 100%; height: 100%; }
+        #productModal { transition: opacity 0.3s ease; }
+        #productModal > div { transition: transform 0.3s ease, opacity 0.3s ease; transform: scale(0.95); opacity: 0; }
+        #productModal.active { opacity: 1; pointer-events: auto; }
+        #productModal.active > div { transform: scale(1); opacity: 1; }
+    </style>
+</head>
+<body class="bg-soft text-gray-800 font-sans antialiased overflow-x-hidden selection:bg-vespa selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <img id="navLogo" src="" alt="Vespa Depok Logo" class="h-8 md:h-10 object-contain rounded">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#hero" class="text-sm font-semibold hover:text-vespa transition-colors">HOME</a>
+                    <a href="#katalog" class="text-sm font-semibold hover:text-vespa transition-colors">KATALOG</a>
+                    <a href="#about" class="text-sm font-semibold hover:text-vespa transition-colors">TENTANG</a>
+                    <a href="#footer" class="text-sm font-semibold hover:text-vespa transition-colors">KONTAK</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a id="navWaBtn" href="#" target="_blank" class="bg-vespa hover:bg-vespa-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-md shadow-vespa/30 flex items-center gap-2">
+                        <i class="ph ph-whatsapp-logo text-lg"></i> WHATSAPP
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-gray-800 hover:text-vespa focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#hero" class="block px-3 py-3 text-base font-medium hover:bg-gray-50 hover:text-vespa rounded-md">Home</a>
+                <a href="#katalog" class="block px-3 py-3 text-base font-medium hover:bg-gray-50 hover:text-vespa rounded-md">Katalog</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium hover:bg-gray-50 hover:text-vespa rounded-md">Tentang</a>
+                <a href="#footer" class="block px-3 py-3 text-base font-medium hover:bg-gray-50 hover:text-vespa rounded-md">Kontak</a>
+                <a id="mobileWaBtn" href="#" target="_blank" class="mt-4 w-full bg-vespa text-white px-3 py-3 rounded-md font-semibold text-center flex justify-center items-center gap-2">
+                    <i class="ph ph-whatsapp-logo text-xl"></i> Chat WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative pt-24 pb-12 md:pt-32 md:pb-20 lg:min-h-[90vh] flex items-center bg-gradient-to-br from-white to-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <span class="inline-block py-1 px-3 rounded-full bg-vespa/10 text-vespa-dark font-semibold text-xs tracking-widest mb-4">VESPA OFFICIAL BRANCH</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight mb-6 tracking-tight">
+                        FIND YOUR <span class="text-vespa">STYLE</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Temukan Vespa baru resmi dengan desain ikonik, teknologi modern, dan karakter khas yang bikin hari kamu makin asik.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#katalog" class="bg-dark hover:bg-gray-800 text-white px-8 py-3.5 rounded-full font-semibold transition-all text-center">
+                            LIHAT KATALOG
+                        </a>
+                        <a id="heroWaBtn" href="#" target="_blank" class="bg-white border-2 border-vespa text-vespa-dark hover:bg-vespa hover:text-white px-8 py-3.5 rounded-full font-semibold transition-all text-center">
+                            HUBUNGI KAMI
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 relative">
+                    <img id="heroImage" src="" alt="Vespa Hero" class="w-full h-auto max-w-lg mx-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-vespa rounded-full blur-3xl opacity-10 -z-10 transform translate-x-10 translate-y-10 scale-90"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white py-8 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x-0 md:divide-x divide-gray-100">
+                <div class="flex flex-col items-center p-2">
+                    <div class="w-12 h-12 bg-vespa/10 text-vespa rounded-full flex items-center justify-center mb-3">
+                        <i class="ph ph-seal-check text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-dark mb-1">OFFICIAL STORE</h3>
+                    <p class="text-xs text-gray-500">Dealer & Unit Official</p>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <div class="w-12 h-12 bg-vespa/10 text-vespa rounded-full flex items-center justify-center mb-3">
+                        <i class="ph ph-key text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-dark mb-1">UNIT ORIGINAL</h3>
+                    <p class="text-xs text-gray-500">100% Suku Cadang Asli</p>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <div class="w-12 h-12 bg-vespa/10 text-vespa rounded-full flex items-center justify-center mb-3">
+                        <i class="ph ph-info text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-dark mb-1">INFORMASI JELAS</h3>
+                    <p class="text-xs text-gray-500">Spesifikasi & Detail Akurat</p>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <div class="w-12 h-12 bg-vespa/10 text-vespa rounded-full flex items-center justify-center mb-3">
+                        <i class="ph ph-chat-circle-dots text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-dark mb-1">TIM PELAYANAN</h3>
+                    <p class="text-xs text-gray-500">Konsultasi Cepat & Ramah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="katalog" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">TEMUKAN VESPA FAVORIT KAMU</h2>
+                <p class="text-gray-600">Pilih tipe Vespa yang sesuai dengan karakter dan kebutuhan Kamu.</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-10">
+                <div id="categoryTabs" class="flex overflow-x-auto hide-scrollbar w-full md:w-auto gap-2 pb-2 md:pb-0"></div>
+                <div class="w-full md:w-72 relative">
+                    <i class="ph ph-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg"></i>
+                    <input type="text" id="searchInput" placeholder="Cari Vespa..." class="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-full focus:outline-none focus:border-vespa focus:ring-2 focus:ring-vespa/20 transition-all text-sm shadow-sm">
+                </div>
+            </div>
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            <div id="emptyState" class="hidden text-center py-20">
+                <i class="ph ph-magnifying-glass text-6xl text-gray-300 mb-4 inline-block"></i>
+                <h3 class="text-xl font-semibold text-gray-600">Vespa tidak ditemukan</h3>
+                <p class="text-gray-500 mt-2">Coba gunakan kata kunci lain atau pilih kategori berbeda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://i.imgur.com/POhKzOe.jpeg" alt="Showroom Vespa Depok" class="rounded-2xl shadow-lg object-cover w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-dark mb-6">ABOUT VESPA DEPOK</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Vespa baru resmi dengan desain ikonik, karakter premium, dan pengalaman berkendara nostalgia khas Vespa classic.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Katalog ini menampilkan jajaran <strong class="text-vespa-dark">PRODUK RESMI / VESPA OFFICIAL</strong>. Kami memberikan pelayanan terbaik untuk membantu Kamu menemukan Vespa impian kamu.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <i class="ph ph-warning-circle text-vespa text-xl"></i>
+                        <span>Informasi produk dan ketersediaan unit dapat berubah. Silakan hubungi kami untuk informasi terbaru.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-vespa text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">SIAP MENEMUKAN VESPA PILIHANMU?</h2>
+            <p class="text-vespa-light text-lg mb-10 max-w-2xl mx-auto">
+                Hubungi Vespa Depok untuk mendapatkan informasi lebih lanjut mengenai unit, warna, spesifikasi, dan ketersediaan.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a id="ctaWaBtn" href="#" target="_blank" class="bg-white text-vespa-dark hover:bg-gray-50 px-8 py-4 rounded-full font-bold transition-all shadow-lg flex items-center justify-center gap-2">
+                    <i class="ph-fill ph-whatsapp-logo text-xl"></i> CHAT WHATSAPP
+                </a>
+                <a id="ctaIgBtn" href="#" target="_blank" class="bg-transparent border border-white hover:bg-white/10 px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2">
+                    <i class="ph ph-instagram-logo text-xl"></i> LIHAT INSTAGRAM
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">LOKASI KAMI</h2>
+            <p class="text-gray-600 max-w-md mx-auto mb-8" id="locationAddress"></p>
+            <a id="mapsBtn" href="#" target="_blank" class="inline-flex items-center gap-2 bg-dark hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-all">
+                <i class="ph ph-map-pin text-lg"></i> BUKA GOOGLE MAPS
+            </a>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-dark text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-white font-bold text-xl mb-4 tracking-widest" id="footerStoreName"></h3>
+                    <p class="text-vespa font-semibold mb-4 text-sm">FIND YOUR STYLE</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li><a id="footerWa" href="#" class="hover:text-vespa transition-colors"></a></li>
+                        <li><a id="footerIg" href="#" class="hover:text-vespa transition-colors"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Alamat</h4>
+                    <p class="text-sm leading-relaxed max-w-xs mx-auto md:mx-0" id="footerAddress"></p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> <span id="copyrightName"></span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a id="floatingWaBtn" href="#" target="_blank" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition-transform duration-300 flex items-center justify-center group" title="Chat Kami">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+        <span class="absolute right-full mr-4 bg-white text-dark text-sm font-semibold py-1.5 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chat Vespa Depok
+        </span>
+    </a>
+
+    <div id="productModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none bg-dark/80 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-5xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden relative">
+            <button id="closeModalBtn" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md text-gray-500 hover:text-dark hover:bg-gray-50 transition-colors">
+                <i class="ph ph-x text-xl font-bold"></i>
+            </button>
+            <div class="flex-1 overflow-y-auto hide-scrollbar flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 p-6 lg:p-8 bg-gray-50 flex flex-col">
+                    <span id="modalCategory" class="text-vespa font-bold text-xs tracking-widest mb-2 uppercase"></span>
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-bold text-dark mb-6"></h2>
+                    <div class="relative w-full aspect-square bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4 flex items-center justify-center group">
+                        <img id="modalMainImage" src="" alt="Vespa" class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110">
+                        <button id="prevImgBtn" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full shadow flex items-center justify-center text-dark opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="ph ph-caret-left text-xl"></i>
+                        </button>
+                        <button id="nextImgBtn" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full shadow flex items-center justify-center text-dark opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="ph ph-caret-right text-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modalThumbnails" class="flex gap-3 overflow-x-auto hide-scrollbar pb-2 snap-x"></div>
+                </div>
+                <div class="w-full lg:w-1/2 p-6 lg:p-8 bg-white flex flex-col">
+                    <p id="modalDesc" class="text-gray-600 text-lg leading-relaxed mb-6"></p>
+                    <div class="mb-6">
+                        <h4 class="text-sm font-bold text-dark mb-3 uppercase tracking-wider">Pilihan Warna</h4>
+                        <div id="modalColors" class="flex flex-wrap gap-2 text-sm text-gray-600"></div>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-sm font-bold text-dark mb-4 uppercase tracking-wider border-b pb-2">Spesifikasi Utama</h4>
+                        <ul id="modalSpecs" class="space-y-4 text-sm"></ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-100">
+                        <p class="text-xs text-gray-500 mb-3 font-medium uppercase tracking-wider text-center">Tertarik dengan unit ini?</p>
+                        <a id="modalWaBtn" href="#" target="_blank" class="w-full bg-vespa hover:bg-vespa-dark text-white px-6 py-4 rounded-xl font-bold transition-all shadow-lg flex items-center justify-center gap-2 text-lg">
+                            <i class="ph-fill ph-whatsapp-logo text-2xl"></i> KONSULTASI VIA WHATSAPP
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentCategory = "SEMUA";
+        let currentSearch = "";
+        let modalProduct = null;
+        let currentImageIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                document.getElementById('navLogo').src = CONFIG.logoPath;
+                document.getElementById('heroImage').src = CONFIG.heroImage;
+                document.getElementById('locationAddress').textContent = CONFIG.address;
+                document.getElementById('footerAddress').textContent = CONFIG.address;
+                document.getElementById('footerStoreName').textContent = CONFIG.storeName;
+                document.getElementById('year').textContent = new Date().getFullYear();
+                document.getElementById('copyrightName').textContent = CONFIG.storeName;
+                
+                const waUrl = `https://wa.me/${CONFIG.whatsapp}`;
+                document.getElementById('navWaBtn').href = waUrl;
+                document.getElementById('mobileWaBtn').href = waUrl;
+                document.getElementById('heroWaBtn').href = waUrl;
+                document.getElementById('ctaWaBtn').href = waUrl;
+                document.getElementById('floatingWaBtn').href = waUrl;
+                document.getElementById('footerWa').textContent = `WhatsApp: 0${CONFIG.whatsapp.substring(2)}`;
+                document.getElementById('footerWa').href = waUrl;
+
+                document.getElementById('ctaIgBtn').href = CONFIG.instagramLink;
+                document.getElementById('footerIg').textContent = `Instagram: @${CONFIG.instagram}`;
+                document.getElementById('footerIg').href = CONFIG.instagramLink;
+                document.getElementById('mapsBtn').href = CONFIG.mapsLink;
+
+                renderTabs();
+                filterAndRenderProducts();
+            } catch(e) {
+                console.error(e);
+            }
+        });
+
+        function renderTabs() {
+            const tabsContainer = document.getElementById('categoryTabs');
+            tabsContainer.innerHTML = '';
+            CATEGORIES.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.textContent = cat;
+                if(cat === currentCategory) {
+                    btn.className = "px-6 py-2 rounded-full font-semibold text-sm transition-all whitespace-nowrap bg-vespa text-white shadow-md";
+                } else {
+                    btn.className = "px-6 py-2 rounded-full font-semibold text-sm transition-all whitespace-nowrap bg-white text-gray-600 border border-gray-200 hover:border-vespa hover:text-vespa";
+                }
+                btn.onclick = () => {
+                    currentCategory = cat;
+                    renderTabs();
+                    filterAndRenderProducts();
+                };
+                tabsContainer.appendChild(btn);
+            });
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase();
+            filterAndRenderProducts();
+        });
+
+        function filterAndRenderProducts() {
+            const filtered = products.filter(p => {
+                const matchCategory = currentCategory === "SEMUA" || p.category === currentCategory;
+                const matchSearch = p.name.toLowerCase().includes(currentSearch) || 
+                                    p.category.toLowerCase().includes(currentSearch) ||
+                                    (p.colors && p.colors.some(c => c.toLowerCase().includes(currentSearch)));
+                return matchCategory && matchSearch;
+            });
+            renderProductsToDOM(filtered);
+        }
+
+        function renderProductsToDOM(productList) {
+            const grid = document.getElementById('productGrid');
+            const emptyState = document.getElementById('emptyState');
+            grid.innerHTML = '';
+            
+            if(productList.length === 0) {
+                grid.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                grid.classList.remove('hidden');
+                emptyState.classList.add('hidden');
+            }
+
+            productList.forEach(product => {
+                const coverImg = (product.images && product.images.length > 0) ? product.images[0] : 'https://placehold.co/800x800/ffffff/9AC3C5?text=No+Image';
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col cursor-pointer";
+                card.onclick = () => openModal(product.id);
+                
+                card.innerHTML = `
+                    <div class="relative w-full product-image-container bg-white flex items-center justify-center p-6 border-b border-gray-50">
+                        <img src="${coverImg}" alt="${product.name}" class="product-image transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-vespa/10 text-vespa-dark text-xs font-bold px-3 py-1 rounded-full">
+                            ${product.category}
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-lg font-bold text-dark mb-2 group-hover:text-vespa transition-colors">${product.name}</h3>
+                        <p class="text-sm text-gray-500 mb-4 line-clamp-2 flex-1">${product.description || ''}</p>
+                        <div class="text-xs text-gray-400 mb-4 truncate">
+                            Warna: ${(product.colors || []).join(', ')}
+                        </div>
+                        <button class="w-full bg-soft text-dark group-hover:bg-vespa group-hover:text-white font-semibold py-3 rounded-xl transition-colors text-sm border border-gray-100 group-hover:border-vespa">
+                            DETAIL PRODUK
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function openModal(productId) {
+            modalProduct = products.find(p => p.id === productId);
+            if(!modalProduct) return;
+
+            currentImageIndex = 0;
+            document.getElementById('modalCategory').textContent = modalProduct.category;
+            document.getElementById('modalTitle').textContent = modalProduct.name;
+            document.getElementById('modalDesc').textContent = modalProduct.description || '';
+
+            const colorsContainer = document.getElementById('modalColors');
+            colorsContainer.innerHTML = '';
+            (modalProduct.colors || []).forEach(color => {
+                colorsContainer.innerHTML += `<span class="bg-gray-100 px-3 py-1 rounded-md border border-gray-200">${color}</span>`;
+            });
+
+            const specsContainer = document.getElementById('modalSpecs');
+            specsContainer.innerHTML = '';
+            if(modalProduct.specifications) {
+                for (const [key, value] of Object.entries(modalProduct.specifications)) {
+                    const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                    specsContainer.innerHTML += `
+                        <li class="flex flex-col sm:flex-row sm:justify-between py-2 border-b border-gray-50 last:border-0 gap-1 sm:gap-4">
+                            <span class="text-gray-500 w-1/3">${formattedKey}</span>
+                            <span class="font-medium text-dark flex-1 sm:text-right">${value}</span>
+                        </li>
+                    `;
+                }
+            }
+
+            const waMsg = encodeURIComponent(`Halo ${CONFIG.storeName}, saya tertarik dengan Vespa ${modalProduct.name}. Mohon informasi mengenai unit dan detail produknya.`);
+            document.getElementById('modalWaBtn').href = `https://wa.me/${CONFIG.whatsapp}?text=${waMsg}`;
+
+            updateModalSlider();
+            const modal = document.getElementById('productModal');
+            document.body.style.overflow = 'hidden'; 
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; 
+            modalProduct = null;
+        }
+
+        function updateModalSlider() {
+            if(!modalProduct || !modalProduct.images || modalProduct.images.length === 0) return;
+            
+            const mainImg = document.getElementById('modalMainImage');
+            mainImg.src = modalProduct.images[currentImageIndex];
+
+            const thumbContainer = document.getElementById('modalThumbnails');
+            thumbContainer.innerHTML = '';
+            
+            modalProduct.images.forEach((imgSrc, index) => {
+                const isActive = index === currentImageIndex;
+                const thumb = document.createElement('div');
+                thumb.className = `w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden cursor-pointer border-2 transition-all bg-white flex items-center justify-center p-2 snap-center ${isActive ? 'border-vespa scale-100 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'}`;
+                thumb.onclick = () => {
+                    currentImageIndex = index;
+                    updateModalSlider();
+                };
+                
+                thumb.innerHTML = `<img src="${imgSrc}" class="w-full h-full object-contain">`;
+                thumbContainer.appendChild(thumb);
+            });
+
+            const btnPrev = document.getElementById('prevImgBtn');
+            const btnNext = document.getElementById('nextImgBtn');
+            if(modalProduct.images.length <= 1) {
+                btnPrev.style.display = 'none';
+                btnNext.style.display = 'none';
+            } else {
+                btnPrev.style.display = 'flex';
+                btnNext.style.display = 'flex';
+            }
+        }
+
+        document.getElementById('prevImgBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            if(!modalProduct) return;
+            currentImageIndex = (currentImageIndex - 1 + modalProduct.images.length) % modalProduct.images.length;
+            updateModalSlider();
+        });
+
+        document.getElementById('nextImgBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            if(!modalProduct) return;
+            currentImageIndex = (currentImageIndex + 1) % modalProduct.images.length;
+            updateModalSlider();
+        });
+
+        document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+        document.getElementById('productModal').addEventListener('click', (e) => {
+            if(e.target.id === 'productModal') closeModal();
+        });
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('glass-nav');
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
